@@ -18,22 +18,14 @@ int currsum = 0;
 for(int i=0;i<arr.length;i++)
 {
 	currsum += arr[i];
-    if(currsum>maxsum)
-    {
-        maxsum=currsum;
-        start = tempstart;
-        end=i;
-    }
+    maxsum = Math.max(currsum,maxsum);
 	if(currsum<0)
 	{
 		currsum=0;
         tempstart = i+1;
 	}
 }
-    for(int i =start;i<=end;i++)
-    {
-        System.out.print(arr[i]+" ");
-    }
+    
 	
 
 System.out.print(maxsum);
